@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, ModalController } from '@ionic/angular';
+import { NavController, ModalController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-single-page',
@@ -7,10 +7,17 @@ import { NavController, ModalController } from '@ionic/angular';
   styleUrls: ['./single-page.component.scss'],
 })
 export class SinglePAGEComponent implements OnInit {
+  lat:number;
+  lgn:number;
 
-  constructor(private modalCtr: ModalController) { }
+  constructor(private modalCtr: ModalController, private navParams: NavParams ) { 
+    this.lat = this.navParams.data.location.lat
+    this.lgn = this.navParams.data.location.lgn
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.navParams.data)
+  }
   
   dismiss(){
     this.modalCtr.dismiss()

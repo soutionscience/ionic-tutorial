@@ -4,6 +4,7 @@ import { NewPlacesPage } from '../new-places/new-places.page';
 import { PlacesService } from 'src/app/SERVICES/places.service';
 import { PlacePage } from 'src/app/place/place.page';
 import { SinglePAGEComponent } from 'src/app/COMPONENTS/single-page/single-page.component';
+import { Place } from 'src/models/place.interface';
 
 @Component({
   selector: 'app-home',
@@ -29,16 +30,17 @@ export class HomePage implements OnInit {
     //console.log('clicked')
     //this.navCtrl.push(NewPlacesPage)
   }
-   loadPage(){
+   loadPage(place: Place){
     //console.log('click')
     let modal = this.modalCtr.create({
-      component: SinglePAGEComponent
+      component: SinglePAGEComponent,
+      componentProps: place
     }).then((resp)=>resp.present())
     //return await modal.present();
 
   }
   onOpenPlace(){
-    
+
   }
 
 }

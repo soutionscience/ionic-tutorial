@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import{ Storage} from '@ionic/storage'
 import { ThrowStmt } from '@angular/compiler';
+import { NumericValueAccessor } from '@ionic/angular';
+import { Place } from 'src/models/place.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlacesService {
-  private places: {title: string}[]=[]
+  private places: Place [] =[]
 
 
   constructor(private storage: Storage) { }
 
-  addPlace(place: {title: string}){
+  addPlace=(place: Place)=>{
+    console.log('new place ', place)
     this.places.push(place)
     this.storage.set('places', this.places);
 

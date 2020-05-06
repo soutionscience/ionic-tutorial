@@ -14,6 +14,7 @@ import { IonicStorageModule, Storage } from '@ionic/storage';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { PlacePage } from './place/place.page';
 //import { NewPlacePipe } from './PAGES/new-place.pipe';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [AppComponent, PlacePage],
@@ -25,6 +26,9 @@ import { PlacePage } from './place/place.page';
     FormsModule,
     ReactiveFormsModule,
     IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC17wNTqyVviI5lBPxF3S3mxPGkrXMPAlM'
+    })
   //  GeolocationModule
    // Storage
  

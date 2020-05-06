@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { SinglePAGEComponent } from 'src/app/COMPONENTS/single-page/single-page.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   entryComponents:[SinglePAGEComponent],
@@ -15,7 +16,8 @@ import { SinglePAGEComponent } from 'src/app/COMPONENTS/single-page/single-page.
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    AgmCoreModule
   ],
   declarations: [HomePage, SinglePAGEComponent]
 })
