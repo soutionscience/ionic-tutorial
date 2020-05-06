@@ -1,0 +1,19 @@
+<ion-header>
+ 
+<ion-toolbar color="primary">
+    <ion-buttons>
+      <button  end ion-button  icon-only [routerLink]="[ '/new-places']"class="main-background" >
+       <ion-icon end name="add" class="main-background" icon-only></ion-icon>
+      </button>
+      <ion-title class="white-text">Awsome Places</ion-title>
+     </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list *ngIf="places">
+  <ion-item  *ngFor="let p of places" (click)="loadPage()">{{p.title}}</ion-item>
+</ion-list>
+</ion-content>
