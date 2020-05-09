@@ -12,7 +12,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 })
 export class NewPlacesPage implements OnInit {
   createPlaceForm: FormGroup
-  location: {lat:number, lng:number} = {lat:0, lng: 0}
+  location: {lat:number, lgn:number} = {lat:0, lgn: 0}
 
   constructor(private fb: FormBuilder, private placesService: PlacesService,
     private navCtr: NavController, private geoLaction: Geolocation) { }
@@ -37,7 +37,7 @@ export class NewPlacesPage implements OnInit {
   getMyLocation(){
     this.geoLaction.getCurrentPosition().then((resp)=>{
        this.location.lat = resp.coords.latitude;
-       this.location.lng = resp.coords.longitude;
+       this.location.lgn = resp.coords.longitude;
        console.log('detected ', this.location)
     }).catch((err)=>{
       console.log('what is the error: ', err)

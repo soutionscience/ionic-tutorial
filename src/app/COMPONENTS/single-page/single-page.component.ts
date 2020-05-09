@@ -13,6 +13,7 @@ export class SinglePAGEComponent implements OnInit {
   constructor(private modalCtr: ModalController, private navParams: NavParams ) { 
     this.lat = this.navParams.data.location.lat
     this.lgn = this.navParams.data.location.lgn
+    console.log('receiving ', this.lat, ' and ', this.lgn)
   }
 
   ngOnInit() {

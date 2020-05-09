@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
   ionViewWillEnter(){
    // console.log('firing')
    this.placeService.getPlaces().then(resp=>{
-   //  console.log('resp from ', resp)
+    // console.log('resp from ', resp)
      this.places = resp
    })
   }
@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
     //this.navCtrl.push(NewPlacesPage)
   }
    loadPage(place: Place){
-    //console.log('click')
+    console.log('click ', place)
     let modal = this.modalCtr.create({
       component: SinglePAGEComponent,
       componentProps: place
