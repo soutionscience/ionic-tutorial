@@ -131,7 +131,7 @@ export class LiveLocationHomePage implements OnInit {
 
     let position = new google.maps.LatLng(lat, lng);
     this.map.setCenter(position)
-    this.map.setZoom(3)
+    this.map.setZoom(15)
 
   }
   deleteLocations(pos){
