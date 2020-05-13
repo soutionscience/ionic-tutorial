@@ -9,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./PAGES/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./PAGES/live-location-home/live-location-home.module').then( m => m.LiveLocationHomePageModule)
+
   },
   {
     path: 'new-places',
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'place',
     loadChildren: () => import('./place/place.module').then( m => m.PlacePageModule)
+  },
+  {
+    path: 'live-location-home',
+    loadChildren: () => import('./PAGES/live-location-home/live-location-home.module').then( m => m.LiveLocationHomePageModule)
   }
 ];
 

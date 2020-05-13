@@ -15,6 +15,19 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { PlacePage } from './place/place.page';
 //import { NewPlacePipe } from './PAGES/new-place.pipe';
 import { AgmCoreModule } from '@agm/core';
+import { AngularFireModule } from '@angular/fire';
+ import { environment } from 'src/environments/environment';
+ import { AngularFireAuthModule } from '@angular/fire/auth';
+ import { AngularFireDatabaseModule } from '@angular/fire/database';
+ import { AngularFireStorageModule } from '@angular/fire/storage';
+
+//alternative
+import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
+import { AngularFirestoreModule } from '@angular/fire/firestore/';
+
+
+
+
 
 @NgModule({
   declarations: [AppComponent, PlacePage],
@@ -28,9 +41,14 @@ import { AgmCoreModule } from '@agm/core';
     IonicStorageModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC17wNTqyVviI5lBPxF3S3mxPGkrXMPAlM'
-    })
-  //  GeolocationModule
-   // Storage
+    }),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+     
+   AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule
+  
  
   ],
   providers: [
