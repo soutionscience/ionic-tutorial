@@ -2,14 +2,21 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch:'full'
+  },
  
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./PAGES/live-location-home/live-location-home.module').then( m => m.LiveLocationHomePageModule)
+    path: 'home',
+    loadChildren: ()=> import('./PAGES/home/home.module').then(m=> m.HomePageModule)
+    //loadChildren: () => import('./PAGES/live-location-home/live-location-home.module').then( m => m.LiveLocationHomePageModule)
 
   },
   {

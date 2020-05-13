@@ -2,12 +2,18 @@
  
 <ion-toolbar color="primary">
     <ion-buttons>
-      <button  end ion-button  icon-only [routerLink]="[ '/new-places']"class="main-background" >
+      <ion-button  slot="start" ion-button  icon-only [routerLink]="[ '/new-places']"class="main-background" >
        <ion-icon end name="add" class="main-background" icon-only></ion-icon>
-      </button>
+      </ion-button>
       <ion-title class="white-text">Awsome Places</ion-title>
-     </ion-buttons>
 
+   
+     </ion-buttons>
+   
+
+  </ion-toolbar>
+  <ion-toolbar color ="primary">
+    <ion-button color="secondary" slot="end" [routerLink] ="['/live-location-home']">Live Location</ion-button>
   </ion-toolbar>
 </ion-header>
 
