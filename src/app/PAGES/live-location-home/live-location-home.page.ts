@@ -36,6 +36,7 @@ export class LiveLocationHomePage implements OnInit {
   constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.onLogin();
     this.isTracking = false;
+   
    }
 
    ionViewWillEnter(){

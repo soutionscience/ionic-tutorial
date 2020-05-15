@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar class="primary">
+    <ion-title>search</ion-title>
+    
+  </ion-toolbar>
+  <ion-searchbar #searchBar showCancelButton="always" animated 
+  placeholder="call me when am around" color="secondary" (keyup)="search(searchBar.value)"></ion-searchbar>
+  <ion-list *ngIf="places">
+    <ion-item lines="none" 
+    *ngFor="let p of places" 
+    (click)="selectPlace(p)">
+
+    {{p.name}}
+
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+<ion-content>
+  <div #map></div>
+
+</ion-content>

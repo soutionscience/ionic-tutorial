@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'search',
     pathMatch:'full'
   },
  
@@ -30,7 +30,12 @@ const routes: Routes = [
   {
     path: 'live-location-home',
     loadChildren: () => import('./PAGES/live-location-home/live-location-home.module').then( m => m.LiveLocationHomePageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./PAGES/search/search.module').then( m => m.SearchPageModule)
   }
+
 ];
 
 @NgModule({
