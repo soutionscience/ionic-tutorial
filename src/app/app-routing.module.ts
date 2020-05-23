@@ -5,10 +5,10 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'search',
+    redirectTo: 'home',
     pathMatch:'full'
   },
- 
+
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
