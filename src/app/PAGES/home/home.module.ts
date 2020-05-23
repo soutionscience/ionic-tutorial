@@ -9,6 +9,9 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { SinglePAGEComponent } from 'src/app/COMPONENTS/single-page/single-page.component';
 import { AgmCoreModule } from '@agm/core';
+import { Geofence } from '@ionic-native/geofence/ngx';
+//import { Geolocation } from '@capacitor/core';
+
 
 @NgModule({
   entryComponents:[SinglePAGEComponent],
@@ -19,6 +22,7 @@ import { AgmCoreModule } from '@agm/core';
     HomePageRoutingModule,
     AgmCoreModule
   ],
+  providers: [Geofence], 
   declarations: [HomePage, SinglePAGEComponent]
 })
 export class HomePageModule {}

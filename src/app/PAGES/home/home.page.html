@@ -22,4 +22,17 @@
 <ion-list *ngIf="places">
   <ion-item  *ngFor="let p of places" (click)="loadPage(p)">{{p.title}}</ion-item>
 </ion-list>
+
+<div class="page">
+  <h1>wife alert</h1>
+  <div class="loader"></div>
+  <div class="bottom-container">
+    <ion-item fill="none" color="secondary">
+      <ion-range [(ngModel)]="radius" #radiusVal min="4" max="30" color="primary" pin="true"></ion-range>
+    </ion-item>
+    <ion-label color="secondary" id="lbl">Fence parameter (Meters)</ion-label>
+    <ion-button size="large" outline expand="block" color="primary" (click)="setGeofence(radiusVal.value)"> Set fence</ion-button>
+  </div>
+  <p *ngIf="error">{{error}}</p>
+</div>
 </ion-content>

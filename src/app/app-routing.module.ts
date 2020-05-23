@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () => import('./PAGES/search/search.module').then( m => m.SearchPageModule)
+  },  {
+    path: 'active',
+    loadChildren: () => import('./PAGES/active/active.module').then( m => m.ActivePageModule)
   }
+
 
 ];
 
